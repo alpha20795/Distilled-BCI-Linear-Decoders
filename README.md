@@ -7,7 +7,7 @@ Four Jupyter notebooks exploring feature selection, data pooling, knowledge dist
 - **exp1/** - Joint feature & classifier selection (XGBoost/DNC/Lasso features × LR/LDA classifiers)
 - **exp2/** - Pooling strategy comparison (Separate day-specific models vs. Chunk pooling vs. Total cross-day pooling) with inter-session MMD distribution analysis
 - **exp3/** - Mamba encoder trained across sessions for session-invariant learning. OMP identifies sparse features. Student: Lasso (L1) feature selection + L2-penalized logistic regression classifier. Includes 32/16/8/4-bit quantization
-- **0shot/** - Zero-shot to few-shot generalization across recording sessions
+- **zero_shot/** - Zero-shot to few-shot generalization across recording sessions
 
 
 
