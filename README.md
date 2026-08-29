@@ -17,3 +17,12 @@ Four Jupyter notebooks exploring feature selection, data pooling, knowledge dist
 - PyTorch (Exp 3 & zero_shot)
 - XGBoost (Exp 1)
 - Mamba (optional for Exp 3 & zero_shot; falls back to GRU)
+
+
+## Dataset
+
+The dataset used in this project was obtained from the Dryad Digital Repository:
+
+> Willett, Francis; Avansino, Donald; Hochberg, Leigh et al. (2021). Data from: High-performance brain-to-text communication via handwriting [Dataset]. Dryad. https://doi.org/10.5061/dryad.wh70rxwmv
+
+**Source:** [Dryad Dataset](https://doi.org/10.5061/dryad.wh70rxwmv)
