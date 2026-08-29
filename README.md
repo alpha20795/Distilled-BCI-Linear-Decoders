@@ -14,6 +14,6 @@ Four Jupyter notebooks exploring feature selection, data pooling, knowledge dist
 ## Requirements
 
 - NumPy, SciPy, scikit-learn, matplotlib
-- PyTorch (Exp 3 & 4)
+- PyTorch (Exp 3 & zero_shot)
 - XGBoost (Exp 1)
-- Mamba (optional for Exp 3 & 4; falls back to GRU)
+- Mamba (optional for Exp 3 & zero_shot; falls back to GRU)
