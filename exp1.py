@@ -229,12 +229,12 @@ if __name__ == "__main__":
     res = {
         cond: {key: np.zeros((n_days, len(k_grid)))
                for key in ('xgb_lr', 'xgb_lda', 'dnc_lr', 'dnc_lda')}
-        for cond in ('all')
+        for cond in ('all',)
     }
     res_folds = {
         cond: {key: np.zeros((n_days, N_FOLDS, len(k_grid)))
                for key in ('xgb_lr', 'xgb_lda', 'dnc_lr', 'dnc_lda')}
-        for cond in ('all')
+        for cond in ('all',)
     }
 
     # ---------- lasso result arrays (per C value) ----------
@@ -251,7 +251,7 @@ if __name__ == "__main__":
             }
             for ck in C_keys
         }
-        for cond in ('all')
+        for cond in (',)
     }
     lasso_folds = {
         cond: {
@@ -262,7 +262,7 @@ if __name__ == "__main__":
             }
             for ck in C_keys
         }
-        for cond in ('all')
+        for cond in (',)
     }
 
     # ---------- feature export ----------
@@ -303,10 +303,10 @@ if __name__ == "__main__":
                 tr_xgb  = {c: f[:K] for c, f in xgb_all.items()}
                 acc_lr  = logreg_train_predict(X_tr_flat_sc, y_tr, X_te_flat_sc, y_te, tr_xgb, L=L_all)
                 acc_lda = lda_train_predict   (X_tr_flat_sc, y_tr, X_te_flat_sc, y_te, tr_xgb, L=L_all)
-                res['all']['xgb_lr'] [day-1, i] += acc_lr  / N_FOLDS
-                res['all']['xgb_lda'][day-1, i] += acc_lda / N_FOLDS
-                res_folds['all']['xgb_lr'] [day-1, fold, i] = acc_lr
-                res_folds['all']['xgb_lda'][day-1, fold, i] = acc_lda
+                res[']['xgb_lr'] [day-1, i] += acc_lr  / N_FOLDS
+                res[']['xgb_lda'][day-1, i] += acc_lda / N_FOLDS
+                res_folds[']['xgb_lr'] [day-1, fold, i] = acc_lr
+                res_folds[']['xgb_lda'][day-1, fold, i] = acc_lda
             print("]")
 
             # --- DNC sweep ---
@@ -317,8 +317,8 @@ if __name__ == "__main__":
                 tr_dnc  = {c: f[:K] for c, f in dnc_all.items()}
                 acc_lr  = logreg_train_predict(X_tr_flat_sc, y_tr, X_te_flat_sc, y_te, tr_dnc, L=L_all)
                 acc_lda = lda_train_predict   (X_tr_flat_sc, y_tr, X_te_flat_sc, y_te, tr_dnc, L=L_all)
-                res['all']['dnc_lr'] [day-1, i] += acc_lr  / N_FOLDS
-                res['all']['dnc_lda'][day-1, i] += acc_lda / N_FOLDS
+                res[']['dnc_lr'] [day-1, i] += acc_lr  / N_FOLDS
+                res[']['dnc_lda'][day-1, i] += acc_lda / N_FOLDS
                 res_folds['all']['dnc_lr'] [day-1, fold, i] = acc_lr
                 res_folds['all']['dnc_lda'][day-1, fold, i] = acc_lda
             print("]")
