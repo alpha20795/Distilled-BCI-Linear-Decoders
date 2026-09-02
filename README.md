@@ -1,6 +1,6 @@
 # Neural Decoding Experiments
 
-Four Jupyter notebooks exploring feature selection, data pooling, knowledge distillation, and cross-session generalization in BCI neural decoding.
+Four python codes notebooks exploring feature selection, data pooling, knowledge distillation, and cross-session generalization in BCI neural decoding.
 
 ## Experiments
 
